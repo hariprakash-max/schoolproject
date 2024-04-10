@@ -1,0 +1,2 @@
+# schoolproject
+Django connectivity schoolproject
