@@ -1,0 +1,74 @@
+{% load static %}
+<html>
+    <head>
+        <title>add admission page</title>
+        <link rel="stylesheet" href="{% static 'stylesheets/style.css'%}"/>
+    </head>
+    <script src="{% static '/js/script.js' %}"></script>
+    <body>
+        <h1>Hello {{name}}... this is add admission page</h1>
+        <img src="{% static 'images/IMG_hariphoto.jpg' %}" alt="userphoto" height="100px" width="100px"/>
+        <h2 style="color:red;">My age is {{age}}</h2>
+        <h2>My address is {{address}}</h2>
+        {% comment %} <h3>Please fill below form<h3>    {% endcomment %}
+    </body>
+</html>      
+
+{% comment %} Model forms in django {% endcomment %}
+
+{% comment %} <html>
+    <head>
+        <title>add admission page</title>
+    </head>
+<body>
+<h1>Add Admission Page</h1>
+<form method = "POST">
+<table>
+{{form.as_table}}
+</table>
+<input type ="submit" value ="Add student">
+</form>
+</body>
+</html>
+
+{{form.as_table}}
+{{form.as_p}}
+{{form.as_ul}} {% endcomment %}
+
+
+{% comment %} saving form data into database {% endcomment %}
+
+<html>
+    <head>
+        <title>addadmission page</title>
+    </head>
+<body>
+<h1>Add Admission Page</h1>
+<form method="POST">
+<table>
+{{form.as_table}}
+</table>
+<input type="submit" values="Add student">
+{% csrf_token %}
+</form>
+</body>
+</html>            
+
+{% comment %} updateadmissions.html(templates folder->admissions folder)  {% endcomment %}
+
+<html> 
+<head> 
+    <title>update admissions page</title> 
+</head> 
+<body> 
+<h1>Update Student Details:</h1> 
+<form method="POST"> 
+<table> 
+{{form.as_table}} 
+</table> 
+<input type="submit" value="Update Student"> 
+{% csrf_token %} 
+</form> 
+</body> 
+</html> 
+

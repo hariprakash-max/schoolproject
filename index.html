@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+    <head>
+        <title>add admission page</title>
+        <link rel="stylesheet" href="{% static 'stylesheets/style.css'%}"/>
+    </head>
+<body>
+    <h1>school project</h1>
+    <div class="module">
+        <h1>Admissions</h1>
+        <a href ="./ad/newadm">Add Admissions</a>
+        <a href ="./ad/admreport"><button type="button" name="button">Admission Report</button></a>
+    </div>
+    <div class="module 1">
+        <h1>Finance</h1>
+        <a href="./fin/feecoll"><button type ="button" name="button">Fee collection</button></a>
+        <a href="./fin/duesreport"><button type ="button" name="button">Fee Dues Report</button></a>
+        <a href="./fin/collectionreport"><button type ="button" name="button">Fee Collection Report</button></a>
+        <a href ="./accounts/logout">Logout</a> 
+    </div>
+</body>
+</html>        

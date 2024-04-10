@@ -1,0 +1,16 @@
+{% comment %} creating html forms using django forms {% endcomment %}
+<html>
+    <head>
+        <title>add vendor page</title>
+    </head>
+<body>
+<h1>Add Vendor Page</h1>
+<form method="POST">
+<table>
+{{form.as_table}}
+</table>
+<input type="submit" value="Addvendor">
+{% csrf_token %}
+</form>
+</body>
+</html>                    
